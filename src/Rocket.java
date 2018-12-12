@@ -1,11 +1,16 @@
 public class Rocket implements SpaceShip {
 
-    int currentWeight;
+    int cost;
+    int weight;
     int weightLimit;
 
+    Rocket() {
+
+    }
 
     Rocket(int weightLimit) {
-        this.currentWeight = 0;
+        this.cost = 0;
+        this.weight = 0;
         this.weightLimit = weightLimit;
     }
 
@@ -18,10 +23,10 @@ public class Rocket implements SpaceShip {
     }
 
     public boolean canCarry(Item item) {
-        return (currentWeight + item.getWeight()) > weightLimit;
+        return (weight + item.getWeight()) > weightLimit;
     }
 
     public void carry(Item item) {
-        currentWeight += item.getWeight();
+        weight += item.getWeight();
     }
 }
