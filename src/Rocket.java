@@ -23,7 +23,7 @@ public class Rocket implements SpaceShip {
     }
 
     public boolean canCarry(Item item) {
-        return (weight + item.getWeight()) > weightLimit;
+        return (weight + item.getWeight()) < weightLimit;
     }
 
     public void carry(Item item) {

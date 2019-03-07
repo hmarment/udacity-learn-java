@@ -1,10 +1,10 @@
 
 public class U1 extends Rocket {
 
-    U1(int weightLimit) {
+    U1() {
         this.cost = 100000000;
-        this.weight = 10;
-        this.weightLimit = 18;
+        this.weight = 10000;
+        this.weightLimit = 18000;
     }
 
     public boolean launch() {
